@@ -16,7 +16,6 @@ pipeline{
                 script{
                     withSonarQubeEnv(installationName: 'SonarQube') {
                     }
-
                     timeout(time: 1, unit: 'HOURS') {
                       def qg = waitForQualityGate()
                       if (qg.status != 'OK') {
