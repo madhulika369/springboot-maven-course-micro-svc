@@ -1,7 +1,7 @@
 pipeline{
     agent 'any'
     stages{
-        stage('checkout the code'){
+        stage("build & SonarQube analysis"){
             steps{
                 git url:'https://github.com/madhulika369/springboot-maven-course-micro-svc.git', branch:'master'
             }
