@@ -15,7 +15,6 @@ pipeline{
             steps{
                 script{
                     withSonarQubeEnv(installationName: 'SonarQube') {
-                            sh 'mvn sonar:sonar '
                     }
 
                     timeout(time: 1, unit: 'HOURS') {
